@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous"> -->
+    <title></title>
+    <link href="css/style.min.css" rel="stylesheet">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.js" async></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.aristosgroup.ru/fonts/roboto/font-300-500-700-300italic-regular-italic-500italic-700italic.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+
+  <article id="promo">
+    <div class="wrapper">
+      <h1 class="visually-hidden">Nomi Highchair</h1>
+
+      <div class="banner">
+        <div class="banner__logo-wrapper">
+          <img class="banner__logo" src="img/nomi-logo.svg" alt="" width="138" height="75">
+        </div>
+        <div class="banner__image-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/nomi-banner-desktop.webp">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/nomi-banner-tablet.webp">
+            <source type="image/webp" srcset="img/nomi-banner-mobile.webp 1x, img/nomi-banner-mobile@2x.webp 2x">
+            <source media="(min-width: 1024px)" srcset="img/nomi-banner-desktop.png">
+            <source media="(min-width: 768px)" srcset="img/nomi-banner-tablet.png">
+            <img class="banner__image" src="img/nomi-banner-mobile.png" srcset="img/nomi-banner-mobile@2x.png 2x" alt="Nomi Highchair">
+          </picture>
+        </div>
+        <p class="banner__text">Van<br class="text-break-mobile"> pasgeboren<br> tot tiener</p>
+      </div>
+
+      <section class="intro">
+        <div class="intro__text-wrapper">
+          <p>De meegroeistoel Nomi Highchair is de kern van het Nomi-concept. Hij is perfect op uw kind afgestemd, vanaf de leeftijd van ongeveer 2 jaar tot in zijn tienerjaren. De Nomi Highchair laat zich evenwel met aanvullende sets combineren voor een perfecte aanpassing aan uw opgroeiend kind - vanaf uw baby's eerste dag.</p>
+          <p>Nomi Baby is perfect voor uw pasgeboren baby tot de leeftijd van ongeveer 6 maanden. De babyset kan direct op de houten stoelbasis worden vastgemaakt. Zodra uw kind groot genoeg is om rechtop te zitten, vervangt u de babyset door de zitting, rugleuning en voetsteun.</p>
+          <p>Nomi Mini is een veilige beugel voor peuters van ongeveer 6 tot 24 maanden. De Nomi Mini beugel kunt u handig vastmaken op de zitting en de rug - en ook probleemloos verwijderen wanneer uw kind niet langer de extra steun nodig heeft en zonder hulp in en uit de kinderstoel kan klimmen.
+          </p>
+        </div>
+
+        <div class="intro__video-wrapper">
+          <div class="video">
+            <a class="video__link" href="https://youtu.be/CKXRAg7bg8k">
+              <img class="video__media" src="img/nomi-video-bg.jpg" alt="Nomi Highchair">
+
+            </a>
+            <button class="video__button" aria-label="Play video">
+              <svg width="79" height="79" viewBox="0 0 79 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="39.6042" cy="39.5" r="38.1765" stroke="white" stroke-width="2"/>
+                <path d="M50.2886 39.0547L34.9296 47.9222L34.9296 30.1872L50.2886 39.0547Z" fill="white"/>
+              </svg>
+            </button>
+          </div>
+          <img class="intro__awards-image" src="img/award.png" alt="Bedst til prisen 2016">
+        </div>
+      </section>
+    </div>
+    <section class="options">
+      <div class="options__wrapper wrapper">
+
+            <!-- Slider main container -->
+          <div class="swiper-container options__item-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper options__item-wrapper">
+                <!-- Slides -->
+
+                <div class="options__item swiper-slide">
+                  <figure>
+                    <img class="options__item-image" src="img/nomi-options-01.jpg" alt="">
+                    <figcaption class="options__item-caption">Koop de Nomi Kinderstoel en de uitbreidingen Nomi Baby en Nomi Mini</figcaption>
+                  </figure>
+                </div>
+                <div class="options__item swiper-slide">
+                  <figure>
+                    <img class="options__item-image" src="img/nomi-options-02.jpg" alt="">
+                    <figcaption class="options__item-caption">0-6 maanden Voeg de ligstoel Nomi Baby toe</figcaption>
+                  </figure>
+                </div>
+                <div class="options__item swiper-slide">
+                  <figure>
+                    <img class="options__item-image" src="img/nomi-options-03.jpg" alt="">
+                    <figcaption class="options__item-caption">6-24 maanden Voeg de beugel Nomi Mini toe</figcaption>
+                  </figure>
+                </div>
+                <div class="options__item swiper-slide">
+                  <figure>
+                    <img class="options__item-image" src="img/nomi-options-04.jpg" alt="">
+                  <figcaption class="options__item-caption">24 maanden + Gebruik de Nomi Highchair zonder uitbreidingen</figcaption>
+                  </figure>
+                </div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <div class="options__nav">
+              <div class="swiper-button-prev options__nav-item options__nav-item--left"></div>
+              <div class="swiper-button-next options__nav-item options__nav-item--right"></div>
+            </div>
+
+          </div>
+      </div>
+    </section>
+
+    <section class="details">
+      <h2 class="details__title"><span class="text-bold">Next generation highchair</span> - each detail has a purpose</h2>
+
+      <div class="details__items-wrapper">
+        <picture>
+          <source media="(max-width: 767px)" srcset="img/nomi-details-mobile.jpg 1x, img/nomi-details-mobile@2x.jpg 2x">
+          <source media="(max-width: 1200px)" srcset="img/nomi-details-tablet.jpg 1x, img/nomi-details-tablet@2x.jpg 2x">
+          <img class="details__image" src="img/nomi-details-desktop.jpg" srcset="img/nomi-details-desktop@2x.jpg 2x" alt="Next generation highchair">
+        </picture>
+        <ul class="details__list">
+          <li class="details__item details__item--left">
+            <div class="details__text-wrapper">
+              <p class="details__text">Ergonomisch ontwerp dat de bewegingsvrijheid van het kind stimuleert en tegelijkertijd de armen en de rug ondersteunt</p>
+              <button class="details__close-button">close</button>
+            </div>
+            <button class="details__show-button">show</button>
+          </li>
+          <li class="details__item details__item--left">
+            <div class="details__text-wrapper">
+              <p class="details__text">De beugel is uitgerust volgens de nieuwste veiligheidsnormen</p>
+              <button class="details__close-button">close</button>
+            </div>
+            <button class="details__show-button">show</button>
+          </li>
+          <li class="details__item details__item--left">
+            <div class="details__text-wrapper">
+              <p class="details__text">Het materiaal van de zitting en de voetsteun zorgt voor een goede ondersteuning van de voeten en voorkomt het wegglijden van het kind</p>
+              <button class="details__close-button">close</button>
+            </div>
+            <button class="details__show-button">show</button>
+          </li>
+          <li class="details__item details__item--left">
+            <div class="details__text-wrapper">
+              <p class="details__text">Het voetkussen biedt twee niveaus van voetondersteuning en tegendruk, waardoor een rechte zithouding wordt ondersteund</p>
+              <button class="details__close-button">close</button>
+            </div>
+            <button class="details__show-button">show</button>
+          </li>
+          <li class="details__item details__item--left">
+            <div class="details__text-wrapper">
+              <p class="details__text">De Nomi Highchair voldoet aan alle eisen van de Europese veiligheidsnormen: EN 14988:2017 + EN 12790:2009 en EN 12520:2010</p>
+              <button class="details__close-button">close</button>
+            </div>
+            <button class="details__show-button">show</button>
+          </li>
+          <li class="details__item details__item--left">
+            <div class="details__text-wrapper">
+              <p class="details__text">TufLok® schroeven voor extra veiligheid</p>
+              <button class="details__close-button">close</button>
+            </div>
+            <button class="details__show-button">show</button>
+          </li>
+          <li class="details__item details__item--right">
+            <div class="details__text-wrapper">
+              <p class="details__text">Verkrijgbaar in verschillende soorten hout en plastic die naar wens gecombineerd kunnen worden</p>
+              <button class="details__close-button">close</button>
+            </div>
+            <button class="details__show-button">show</button>
+          </li>
+          <li class="details__item details__item--right">
+            <div class="details__text-wrapper">
+              <p class="details__text">Alle materialen zijn recyclebaar</p>
+              <button class="details__close-button">close</button>
+            </div>
+            <button class="details__show-button">show</button></li>
+          <li class="details__item details__item--right">
+            <div class="details__text-wrapper">
+              <p class="details__text">Weegt slechts 4,9 kg. Gemakkelijk te verplaatsen en op te hangen aan de tafel</p>
+              <button class="details__close-button">close</button>
+            </div>
+            <button class="details__show-button">show</button>
+          </li>
+          <li class="details__item details__item--right">
+            <div class="details__text-wrapper">
+              <p class="details__text">De vorm van de stam zorgt voor een juiste zit- en voetsteundiepte, bij het verstellen van de hoogte</p>
+              <button class="details__close-button">close</button>
+            </div>
+            <button class="details__show-button">show</button>
+          </li>
+          <li class="details__item details__item--right">
+            <div class="details__text-wrapper">
+              <p class="details__text">Een naadloze afstelling zonder gebruik van gereedschap</p>
+              <button class="details__close-button">close</button>
+            </div>
+            <button class="details__show-button">show</button>
+          </li>
+          <li class="details__item details__item--right">
+            <div class="details__text-wrapper">
+              <p class="details__text">Het open ontwerp van de Nomi maakt het voor het kind gemakkelijk om op te zitten en naar de tafel toe te trekken, zodat hij of zij actief kan zitten</p>
+              <button class="details__close-button">close</button>
+            </div>
+            <button class="details__show-button">show</button>
+          </li>
+          <li class="details__item details__item--right">
+            <div class="details__text-wrapper">
+              <p class="details__text">Antikantelwielen verminderen het risico van kantelen</p>
+              <button class="details__close-button">close</button>
+            </div>
+            <button class="details__show-button">show</button>
+          </li>
+        </ul>
+        <div class="details__verified">
+          <span class="details__verified-caption">Getest door:</span>
+          <div class="details__verified-image-wrapper">
+            <picture>
+              <img class="details__verified-image" src="img/veirfied.jpg" srcset="img/veirfied@2x.jpg 2x" alt="Getest door">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="config wrapper">
+      <h2 class="config__title"><span class="text-bold">Next generation highchair</span> - each detail has a purpose</h2>
+        <div class="config__tabs">
+            <ul class="config__tab-list" role="tablist">
+                <li class="config__tab-item" role="presentation">
+                    <a class="config__tab-link" href="#section1" role="tab" id="tab1" aria-selected="true">Colour and stem
+                      <svg class="config__tab-icon" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.69788 8.19307L2.36168 14.2127C1.95862 14.5958 1.30513 14.5958 0.902269 14.2127C0.499374 13.8299 0.499374 13.2091 0.902269 12.8263L6.50882 7.4999L0.902432 2.17367C0.499537 1.79074 0.499537 1.16997 0.902432 0.787198C1.30533 0.404267 1.95879 0.404267 2.36184 0.787198L8.69804 6.80688C8.89949 6.99836 9.0001 7.24905 9.0001 7.49987C9.0001 7.75081 8.89929 8.00168 8.69788 8.19307Z" fill="#909DA8"/>
+                      </svg>
+                    </a>
+                </li>
+                <li class="config__tab-item" role="presentation">
+                    <a class="config__tab-link" href="#section2" role="tab" id="tab2" tabindex="-1">Accessories
+                      <svg class="config__tab-icon" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.69788 8.19307L2.36168 14.2127C1.95862 14.5958 1.30513 14.5958 0.902269 14.2127C0.499374 13.8299 0.499374 13.2091 0.902269 12.8263L6.50882 7.4999L0.902432 2.17367C0.499537 1.79074 0.499537 1.16997 0.902432 0.787198C1.30533 0.404267 1.95879 0.404267 2.36184 0.787198L8.69804 6.80688C8.89949 6.99836 9.0001 7.24905 9.0001 7.49987C9.0001 7.75081 8.89929 8.00168 8.69788 8.19307Z" fill="#909DA8"/>
+                      </svg>
+                    </a>
+                </li>
+                <li class="config__tab-item" role="presentation">
+                    <a class="config__tab-link" href="#section3" role="tab" id="tab3" tabindex="-1">Nomi Baby
+                      <svg class="config__tab-icon" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.69788 8.19307L2.36168 14.2127C1.95862 14.5958 1.30513 14.5958 0.902269 14.2127C0.499374 13.8299 0.499374 13.2091 0.902269 12.8263L6.50882 7.4999L0.902432 2.17367C0.499537 1.79074 0.499537 1.16997 0.902432 0.787198C1.30533 0.404267 1.95879 0.404267 2.36184 0.787198L8.69804 6.80688C8.89949 6.99836 9.0001 7.24905 9.0001 7.49987C9.0001 7.75081 8.89929 8.00168 8.69788 8.19307Z" fill="#909DA8"/>
+                      </svg>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="config__tabs-wrapper">
+              <section class="config__tab" id="section1" role="tabpanel" tabindex="-1" aria-labelledby="tab1">
+                <h3 class="config__tab-title">Colour and stem</h3>
+                <div class="config__items-wrapper">
+                  <div class="config__item" data-category="highchair">
+                    <div class="config__item-header">
+                      <span class="config__item-caption">Kies een kleur</span>
+                    </div>
+                    <fieldset>
+                      <div class="highchair-color"></div>
+                    </fieldset>
+                  </div>
+
+                  <div class="config__item" data-category="base">
+                    <div class="config__item-header">
+                      <span class="config__item-caption">Kies stam</span>
+                    </div>
+                    <fieldset>
+                      <p class="config__item-text">Stoelbasis Basic: een kern van stoomgebogen beukfineer bedekt met eikfineer. Behandeld met kleurloze olie of teervernis.</p>
+                      <div class="base-color">
+                      </div>
+                      <p class="config__item-text">Stoelbasis Premium: stoomgebogen eik- of walnootfineer behandeld met natuurlijke olie + 50 €</p>
+                      <div class="base-color-premium">
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+
+              </section>y 
+
+              <section class="config__tab" id="section2" role="tabpanel" tabindex="-1" aria-labelledby="tab2" hidden="">
+                <h2 class="config__tab-title">Accessories</h2>
+                <div class="config__items-wrapper">
+                  <div class="config__item" data-category="mini">
+                    <div class="config__item-header">
+                      <input class="config__checkbox" type="checkbox" id="mini" name="mini" value="mini">
+                      <label for="mini">Nomi Mini</label>
+                      <span class="config__item-price"></span>
+                    </div>
+
+                    <div class="config__desc">
+                      <span class="config__desc-text">Restraint for children aged 6-36 months. Easily snaps on the Highchair</span>
+                      <div class="config__desc-image-wrapper">
+                        <picture>
+                          <img class="config__desc-image" src="img/nomi-mini.jpg" srcset="img/nomi-mini@2x.jpg 2x" alt="Nomi Mini">
+                        </picture>
+                      </div>
+                    </div>
+
+                    <fieldset>
+                      <div class="mini-color"></div>
+                    </fieldset>
+                  </div>
+
+
+
+                  <div class="config__item" data-category="harness">
+                    <div class="config__item-header">
+                      <input class="config__checkbox" type="checkbox" id="harness" name="harness" value="harness">
+                      <label for="harness">Highchair Harness</label>
+                      <span class="config__item-price"></span>
+                    </div>
+
+                    <div class="config__desc">
+                      <span class="config__desc-text">Highchair Harness. Suited for Nomi Highchair and WITH the restraint Nomi Mini. For children from 6-36 months.</span>
+                      <div class="config__desc-image-wrapper">
+                        <picture>
+                          <img class="config__desc-image" src="img/nomi-harness.jpg" srcset="img/nomi-harness@2x.jpg 2x" alt="Highchair Harness">
+                        </picture>
+                      </div>
+                    </div>
+
+                    <fieldset>
+                      <div class="harness-color"></div>
+                    </fieldset>
+                  </div>
+
+
+                  <div class="config__item" data-category="tray">
+                    <div class="config__item-header">
+                      <input class="config__checkbox" type="checkbox" id="tray" name="tray" value="tray">
+                      <label for="tray">Tray by Evomove</label>
+                      <span class="config__item-price"></span>
+                    </div>
+
+                    <div class="config__desc">
+                      <span class="config__desc-text">Tray by Evomove. Practical tray that is easy to click on Nomi Mini.</span>
+                      <div class="config__desc-image-wrapper">
+                        <picture>
+                          <img class="config__desc-image" src="img/nomi-tray.jpg" srcset="img/nomi-tray@2x.jpg 2x" alt="Tray by Evomove">
+                        </picture>
+                      </div>
+                    </div>
+
+                    <fieldset>
+                      <div class="tray-color"></div>
+                    </fieldset>
+                  </div>
+
+
+                  <div class="config__item" data-category="cushion">
+                    <div class="config__item-header">
+                      <input class="config__checkbox" type="checkbox" id="cushion" name="cushion" value="cushion">
+                      <label for="cushion">Highchair Cushion</label>
+                      <span class="config__item-price"></span>
+                      <button class="config__flip" data-category="cushion">
+                        <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.1532 3.62776C11.2995 3.86108 11.4133 3.91162 11.4303 3.72713L11.4611 3.39242C11.5053 2.91246 11.9302 2.55919 12.4101 2.60336C12.8901 2.64754 13.2434 3.07243 13.1992 3.5524L12.925 6.532C12.8808 7.01196 12.4559 7.36524 11.9759 7.32106L8.99633 7.04682C8.51637 7.00264 8.16309 6.57775 8.20727 6.09778C8.25145 5.61782 8.67634 5.26454 9.15631 5.30872C9.15631 5.30872 9.30007 5.32195 9.47761 5.33829C9.65514 5.35463 9.72372 5.15636 9.59434 4.91333C9.00671 3.81081 7.89483 3.05542 6.62875 2.93889C4.57035 2.74944 2.74169 4.26985 2.55223 6.32826C2.3628 8.38641 3.88321 10.2151 5.94162 10.4045C6.49011 10.455 6.89389 10.9406 6.84341 11.4891C6.79292 12.0376 6.30729 12.4414 5.75879 12.3909C2.60511 12.1009 0.275574 9.29909 0.565811 6.14568C0.856072 2.99202 3.6579 0.662482 6.81156 0.952742C8.61448 1.11843 10.2139 2.12978 11.1532 3.62776Z" fill="#C4C4C4"/>
+                        </svg>flip</button>
+                    </div>
+
+                    <div class="config__desc">
+                      <span class="config__desc-text">The cushions are reversible with a different colour on each side.</span>
+                    </div>
+
+                    <fieldset>
+                      <p class="config__color-caption">choose cushion</p>
+                      <div class="cushion-color"></div>
+                      <p class="config__color-caption">Premuim cushion + 25 €</p>
+                      <div class="cushion-color-premium"></div>
+                    </fieldset>
+                  </div>
+                </div>
+              </section>
+
+              <section class="config__tab" id="section3" role="tabpanel" tabindex="-1" aria-labelledby="tab3" hidden="">
+                  <h2 class="config__tab-title">Nomi Baby</h2>
+                  <div class="config__items-wrapper">
+                    <div class="config__item" data-category="baby">
+                      <div class="config__item-header">
+                        <input class="config__checkbox" type="checkbox" id="baby" name="baby" value="baby">
+                        <label for="baby">Nomi Baby</label>
+                        <span class="config__item-price"></span>
+                        <button class="config__flip" data-category="mattress">flip</button>
+                      </div>
+
+                      <div class="config__desc">
+                        <span class="config__desc-text">Nomi Baby including mattress and harness for children up to 6 months old. Easily attaches on the Nomi Highchair.</span>
+                        <div class="config__desc-image-wrapper">
+                          <picture>
+                            <img class="config__desc-image" src="img/nomi-baby.jpg" srcset="img/nomi-baby@2x.jpg 2x" alt="Nomi Baby">
+                          </picture>
+                        </div>
+                      </div>
+
+                      <fieldset>
+                        <p class="config__color-caption">choose base</p>
+                        <div class="babybase-color"></div>
+                        <p class="config__color-caption">choose cushion</p>
+                        <div class="mattress-color"></div>
+                        <p class="config__color-caption">Premuim cushion + 25 €</p>
+                        <div class="mattress-color-premium"></div>
+                      </fieldset>
+                    </div>
+
+                    <div class="config__item" data-category="play">
+                      <div class="config__item-header">
+                        <input class="config__checkbox" type="checkbox" id="play" name="play" value="play">
+                        <label for="play">Nomi Play</label>
+                        <span class="config__item-price"></span>
+                      </div>
+
+                      <div class="config__desc">
+                        <span class="config__desc-text">Nomi Play toy bar - grey (one style) including charm for Nomi Baby. Can be folded down either forwards or backwards for easy access to your baby.</span>
+                        <div class="config__desc-image-wrapper">
+                          <picture>
+                            <img class="config__desc-image" src="img/nomi-play.jpg" srcset="img/nomi-play@2x.jpg 2x" alt="Nomi Play">
+                          </picture>
+                        </div>
+                      </div>
+
+                      <fieldset>
+                        <div class="play-color"></div>
+                      </fieldset>
+                    </div>
+                  </div>
+              </section>
+
+              <div class="config__final-product final-product">
+                <p class="final-product__price-text">
+                  Total price <span class="final-product__price">0</span> €
+                </p>
+
+                <div class="final-product__image">
+                  <img class="final-product__image-part" id="image-base" src="img/base/oker.png" alt="">
+                  <img class="final-product__image-part" id="image-legs" src="" alt="">
+                  <img class="final-product__image-part chair" id="image-highchair" src="img/chair/zwart.png" alt="">
+                  <img class="final-product__image-part chair" id="image-mini" src="" alt="">
+                  <img class="final-product__image-part chair" id="image-tray" src="" alt="">
+                  <img class="final-product__image-part chair" id="image-cushion" src="" alt="">
+                  <img class="final-product__image-part baby" id="image-babybase" src="" alt="">
+                  <img class="final-product__image-part baby" id="image-mattress" src="" alt="">
+                </div>
+                <a class="final-product__buy">In winkelmandje</a>
+              </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+  </article>
+
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

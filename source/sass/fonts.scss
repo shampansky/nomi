@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "centrale_sans_book";
+  font-display: swap;
+  src:
+    url("../fonts/hinted-CentraleSans-Light.woff") format("woff"),
+    url("../fonts/hinted-CentraleSans-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "centrale_sans_book";
+  font-display: swap;
+  src:
+    url("../fonts/hinted-CentraleSans-Medium.woff") format("woff"),
+    url("../fonts/hinted-CentraleSans-Medium.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "centrale_sans_book";
+  font-display: swap;
+  src:
+    url("../fonts/hinted-CentraleSans-Bold.woff") format("woff"),
+    url("../fonts/hinted-CentraleSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
