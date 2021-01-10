@@ -225,199 +225,208 @@
 
     <section class="config wrapper">
       <h2 class="config__title"><span class="text-bold">Next generation highchair</span> - each detail has a purpose</h2>
-        <div class="config__tabs">
+      <div class="config__tabs">
 
-          <input class="config__tab-radio" type="radio" name="tabs" id="tab1" checked="checked" data-section="section1">
-          <label class="config__tab-label"  for="tab1">Colour and stem</label>
-          <section class="config__tab" id="section1">
-            <h3 class="config__tab-title">Colour and stem</h3>
-            <div class="config__items-wrapper">
-              <div class="config__item" data-category="highchair">
-                <div class="config__item-header">
-                  <span class="config__item-caption">Kies een kleur</span>
-                </div>
-                <fieldset>
-                  <div class="highchair-color"></div>
-                </fieldset>
+        <input class="config__tab-radio" type="radio" name="tabs" id="tab1" checked="checked" data-section="section1">
+        <label class="config__tab-label"  for="tab1">Colour and stem
+          <svg class="config__tab-arrow" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.69788 8.19307L2.36168 14.2127C1.95862 14.5958 1.30513 14.5958 0.902269 14.2127C0.499374 13.8299 0.499374 13.2091 0.902269 12.8263L6.50882 7.4999L0.902432 2.17367C0.499537 1.79074 0.499537 1.16997 0.902432 0.787198C1.30533 0.404267 1.95879 0.404267 2.36184 0.787198L8.69804 6.80688C8.89949 6.99836 9.0001 7.24905 9.0001 7.49987C9.0001 7.75081 8.89929 8.00168 8.69788 8.19307Z" fill="#909DA8"/>
+          </svg>
+        </label>
+        <section class="config__tab" id="section1">
+          <h3 class="config__tab-title">Colour and stem</h3>
+          <div class="config__items-wrapper">
+            <div class="config__item" data-category="highchair">
+              <div class="config__item-header">
+                <span class="config__item-caption">Kies een kleur</span>
               </div>
-
-              <div class="config__item" data-category="base">
-                <div class="config__item-header">
-                  <span class="config__item-caption">Kies stam</span>
-                </div>
-                <fieldset>
-                  <p class="config__item-text">Stoelbasis Basic: een kern van stoomgebogen beukfineer bedekt met eikfineer. Behandeld met kleurloze olie of teervernis.</p>
-                  <div class="base-color">
-                  </div>
-                  <p class="config__item-text">Stoelbasis Premium: stoomgebogen eik- of walnootfineer behandeld met natuurlijke olie + 50 €</p>
-                  <div class="base-color-premium">
-                  </div>
-                </fieldset>
-              </div>
+              <fieldset>
+                <div class="highchair-color config__color-wrapper"></div>
+              </fieldset>
             </div>
 
-          </section>
+            <div class="config__item" data-category="base">
+              <div class="config__item-header">
+                <span class="config__item-caption">Kies stam</span>
+              </div>
+              <fieldset>
+                <p class="config__item-text">Stoelbasis Basic: een kern van stoomgebogen beukfineer bedekt met eikfineer. Behandeld met kleurloze olie of teervernis.</p>
+                <div class="base-color config__color-wrapper">
+                </div>
+                <p class="config__item-text">Stoelbasis Premium: stoomgebogen eik- of walnootfineer behandeld met natuurlijke olie + 50 €</p>
+                <div class="base-color-premium config__color-wrapper">
+                </div>
+              </fieldset>
+            </div>
+          </div>
 
-          <input class="config__tab-radio" type="radio" name="tabs" id="tab2" data-section="section2">
-          <label class="config__tab-label"  for="tab2">Accessories</label>
-          <section class="config__tab" id="section2">
-            <h2 class="config__tab-title">Accessories</h2>
+        </section>
+
+        <input class="config__tab-radio" type="radio" name="tabs" id="tab2" data-section="section2">
+        <label class="config__tab-label"  for="tab2">Accessories
+          <svg class="config__tab-arrow" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.69788 8.19307L2.36168 14.2127C1.95862 14.5958 1.30513 14.5958 0.902269 14.2127C0.499374 13.8299 0.499374 13.2091 0.902269 12.8263L6.50882 7.4999L0.902432 2.17367C0.499537 1.79074 0.499537 1.16997 0.902432 0.787198C1.30533 0.404267 1.95879 0.404267 2.36184 0.787198L8.69804 6.80688C8.89949 6.99836 9.0001 7.24905 9.0001 7.49987C9.0001 7.75081 8.89929 8.00168 8.69788 8.19307Z" fill="#909DA8"/>
+          </svg>
+        </label>
+        <section class="config__tab" id="section2">
+          <h2 class="config__tab-title">Accessories</h2>
+          <div class="config__items-wrapper">
+            <div class="config__item" data-category="mini">
+              <div class="config__item-header">
+                <input class="config__checkbox" type="checkbox" id="mini" name="mini" value="mini">
+                <label for="mini">Nomi Mini</label>
+                <span class="config__item-price"></span>
+              </div>
+
+              <div class="config__desc">
+                <span class="config__desc-text">Restraint for children aged 6-36 months. Easily snaps on the Highchair</span>
+                <div class="config__desc-image-wrapper">
+                  <picture>
+                    <img class="config__desc-image" src="img/nomi-mini.jpg" srcset="img/nomi-mini@2x.jpg 2x" alt="Nomi Mini">
+                  </picture>
+                </div>
+              </div>
+
+              <fieldset>
+                <div class="mini-color config__color-wrapper"></div>
+              </fieldset>
+            </div>
+
+
+
+            <div class="config__item" data-category="harness">
+              <div class="config__item-header">
+                <input class="config__checkbox" type="checkbox" id="harness" name="harness" value="harness">
+                <label for="harness">Highchair Harness</label>
+                <span class="config__item-price"></span>
+              </div>
+
+              <div class="config__desc">
+                <span class="config__desc-text">Highchair Harness. Suited for Nomi Highchair and WITH the restraint Nomi Mini. For children from 6-36 months.</span>
+                <div class="config__desc-image-wrapper">
+                  <picture>
+                    <img class="config__desc-image" src="img/nomi-harness.jpg" srcset="img/nomi-harness@2x.jpg 2x" alt="Highchair Harness">
+                  </picture>
+                </div>
+              </div>
+
+              <fieldset>
+                <div class="harness-color config__color-wrapper"></div>
+              </fieldset>
+            </div>
+
+
+            <div class="config__item" data-category="tray">
+              <div class="config__item-header">
+                <input class="config__checkbox" type="checkbox" id="tray" name="tray" value="tray">
+                <label for="tray">Tray by Evomove</label>
+                <span class="config__item-price"></span>
+              </div>
+
+              <div class="config__desc">
+                <span class="config__desc-text">Tray by Evomove. Practical tray that is easy to click on Nomi Mini.</span>
+                <div class="config__desc-image-wrapper">
+                  <picture>
+                    <img class="config__desc-image" src="img/nomi-tray.jpg" srcset="img/nomi-tray@2x.jpg 2x" alt="Tray by Evomove">
+                  </picture>
+                </div>
+              </div>
+
+              <fieldset>
+                <div class="tray-color config__color-wrapper"></div>
+              </fieldset>
+            </div>
+
+
+            <div class="config__item" data-category="cushion">
+              <div class="config__item-header">
+                <input class="config__checkbox" type="checkbox" id="cushion" name="cushion" value="cushion">
+                <label for="cushion">Highchair Cushion</label>
+                <span class="config__item-price"></span>
+
+              </div>
+
+              <div class="config__desc">
+                <span class="config__desc-text">The cushions are reversible with a different colour on each side.</span>
+              </div>
+
+              <fieldset>
+                <p class="config__color-caption">choose cushion</p>
+                <div class="cushion-color config__color-wrapper"></div>
+                <p class="config__color-caption">Premuim cushion + 25 €</p>
+                <div class="cushion-color-premium config__color-wrapper"></div>
+              </fieldset>
+            </div>
+          </div>
+        </section>
+
+        <input class="config__tab-radio" type="radio" name="tabs" id="tab3" data-section="section3">
+        <label class="config__tab-label"  for="tab3">Nomi Baby
+          <svg class="config__tab-arrow" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.69788 8.19307L2.36168 14.2127C1.95862 14.5958 1.30513 14.5958 0.902269 14.2127C0.499374 13.8299 0.499374 13.2091 0.902269 12.8263L6.50882 7.4999L0.902432 2.17367C0.499537 1.79074 0.499537 1.16997 0.902432 0.787198C1.30533 0.404267 1.95879 0.404267 2.36184 0.787198L8.69804 6.80688C8.89949 6.99836 9.0001 7.24905 9.0001 7.49987C9.0001 7.75081 8.89929 8.00168 8.69788 8.19307Z" fill="#909DA8"/>
+          </svg>
+        </label>
+        <section class="config__tab" id="section3">
+            <h2 class="config__tab-title">Nomi Baby</h2>
             <div class="config__items-wrapper">
-              <div class="config__item" data-category="mini">
+              <div class="config__item" data-category="baby">
                 <div class="config__item-header">
-                  <input class="config__checkbox" type="checkbox" id="mini" name="mini" value="mini">
-                  <label for="mini">Nomi Mini</label>
+                  <input class="config__checkbox" type="checkbox" id="baby" name="baby" value="baby">
+                  <label for="baby">Nomi Baby</label>
                   <span class="config__item-price"></span>
+
                 </div>
 
                 <div class="config__desc">
-                  <span class="config__desc-text">Restraint for children aged 6-36 months. Easily snaps on the Highchair</span>
+                  <span class="config__desc-text">Nomi Baby including mattress and harness for children up to 6 months old. Easily attaches on the Nomi Highchair.</span>
                   <div class="config__desc-image-wrapper">
                     <picture>
-                      <img class="config__desc-image" src="img/nomi-mini.jpg" srcset="img/nomi-mini@2x.jpg 2x" alt="Nomi Mini">
+                      <img class="config__desc-image" src="img/nomi-baby.jpg" srcset="img/nomi-baby@2x.jpg 2x" alt="Nomi Baby">
                     </picture>
                   </div>
                 </div>
 
                 <fieldset>
-                  <div class="mini-color"></div>
-                </fieldset>
-              </div>
-
-
-
-              <div class="config__item" data-category="harness">
-                <div class="config__item-header">
-                  <input class="config__checkbox" type="checkbox" id="harness" name="harness" value="harness">
-                  <label for="harness">Highchair Harness</label>
-                  <span class="config__item-price"></span>
-                </div>
-
-                <div class="config__desc">
-                  <span class="config__desc-text">Highchair Harness. Suited for Nomi Highchair and WITH the restraint Nomi Mini. For children from 6-36 months.</span>
-                  <div class="config__desc-image-wrapper">
-                    <picture>
-                      <img class="config__desc-image" src="img/nomi-harness.jpg" srcset="img/nomi-harness@2x.jpg 2x" alt="Highchair Harness">
-                    </picture>
-                  </div>
-                </div>
-
-                <fieldset>
-                  <div class="harness-color"></div>
-                </fieldset>
-              </div>
-
-
-              <div class="config__item" data-category="tray">
-                <div class="config__item-header">
-                  <input class="config__checkbox" type="checkbox" id="tray" name="tray" value="tray">
-                  <label for="tray">Tray by Evomove</label>
-                  <span class="config__item-price"></span>
-                </div>
-
-                <div class="config__desc">
-                  <span class="config__desc-text">Tray by Evomove. Practical tray that is easy to click on Nomi Mini.</span>
-                  <div class="config__desc-image-wrapper">
-                    <picture>
-                      <img class="config__desc-image" src="img/nomi-tray.jpg" srcset="img/nomi-tray@2x.jpg 2x" alt="Tray by Evomove">
-                    </picture>
-                  </div>
-                </div>
-
-                <fieldset>
-                  <div class="tray-color"></div>
-                </fieldset>
-              </div>
-
-
-              <div class="config__item" data-category="cushion">
-                <div class="config__item-header">
-                  <input class="config__checkbox" type="checkbox" id="cushion" name="cushion" value="cushion">
-                  <label for="cushion">Highchair Cushion</label>
-                  <span class="config__item-price"></span>
-
-                </div>
-
-                <div class="config__desc">
-                  <span class="config__desc-text">The cushions are reversible with a different colour on each side.</span>
-                </div>
-
-                <fieldset>
+                  <p class="config__color-caption">choose base</p>
+                  <div class="babybase-color config__color-wrapper"></div>
                   <p class="config__color-caption">choose cushion</p>
-                  <div class="cushion-color"></div>
+                  <div class="mattress-color config__color-wrapper"></div>
                   <p class="config__color-caption">Premuim cushion + 25 €</p>
-                  <div class="cushion-color-premium"></div>
+                  <div class="mattress-color-premium config__color-wrapper"></div>
+                </fieldset>
+              </div>
+
+              <div class="config__item" data-category="play">
+                <div class="config__item-header">
+                  <input class="config__checkbox" type="checkbox" id="play" name="play" value="play">
+                  <label for="play">Nomi Play</label>
+                  <span class="config__item-price"></span>
+                </div>
+
+                <div class="config__desc">
+                  <span class="config__desc-text">Nomi Play toy bar - grey (one style) including charm for Nomi Baby. Can be folded down either forwards or backwards for easy access to your baby.</span>
+                  <div class="config__desc-image-wrapper">
+                    <picture>
+                      <img class="config__desc-image" src="img/nomi-play.jpg" srcset="img/nomi-play@2x.jpg 2x" alt="Nomi Play">
+                    </picture>
+                  </div>
+                </div>
+
+                <fieldset>
+                  <div class="play-color config__color-wrapper"></div>
                 </fieldset>
               </div>
             </div>
-          </section>
+        </section>
 
-          <input class="config__tab-radio" type="radio" name="tabs" id="tab3" data-section="section3">
-          <label class="config__tab-label"  for="tab3">Nomi Baby</label>
-          <section class="config__tab" id="section3">
-              <h2 class="config__tab-title">Nomi Baby</h2>
-              <div class="config__items-wrapper">
-                <div class="config__item" data-category="baby">
-                  <div class="config__item-header">
-                    <input class="config__checkbox" type="checkbox" id="baby" name="baby" value="baby">
-                    <label for="baby">Nomi Baby</label>
-                    <span class="config__item-price"></span>
-
-                  </div>
-
-                  <div class="config__desc">
-                    <span class="config__desc-text">Nomi Baby including mattress and harness for children up to 6 months old. Easily attaches on the Nomi Highchair.</span>
-                    <div class="config__desc-image-wrapper">
-                      <picture>
-                        <img class="config__desc-image" src="img/nomi-baby.jpg" srcset="img/nomi-baby@2x.jpg 2x" alt="Nomi Baby">
-                      </picture>
-                    </div>
-                  </div>
-
-                  <fieldset>
-                    <p class="config__color-caption">choose base</p>
-                    <div class="babybase-color"></div>
-                    <p class="config__color-caption">choose cushion</p>
-                    <div class="mattress-color"></div>
-                    <p class="config__color-caption">Premuim cushion + 25 €</p>
-                    <div class="mattress-color-premium"></div>
-                  </fieldset>
-                </div>
-
-                <div class="config__item" data-category="play">
-                  <div class="config__item-header">
-                    <input class="config__checkbox" type="checkbox" id="play" name="play" value="play">
-                    <label for="play">Nomi Play</label>
-                    <span class="config__item-price"></span>
-                  </div>
-
-                  <div class="config__desc">
-                    <span class="config__desc-text">Nomi Play toy bar - grey (one style) including charm for Nomi Baby. Can be folded down either forwards or backwards for easy access to your baby.</span>
-                    <div class="config__desc-image-wrapper">
-                      <picture>
-                        <img class="config__desc-image" src="img/nomi-play.jpg" srcset="img/nomi-play@2x.jpg 2x" alt="Nomi Play">
-                      </picture>
-                    </div>
-                  </div>
-
-                  <fieldset>
-                    <div class="play-color"></div>
-                  </fieldset>
-                </div>
-              </div>
-          </section>
-
-          <div class="config__final-product final-product">
-            <!-- <button class="config__flip" data-category="mattress">flip</button> -->
-
-
+        <div class="config__final-product-wrapper">
+          <!-- <button class="config__flip" data-category="mattress">flip</button> -->
+          <div class="final-product">
+            <button class="final-product__close">Close</button>
             <button class="config__flip">
               <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M11.1532 3.62776C11.2995 3.86108 11.4133 3.91162 11.4303 3.72713L11.4611 3.39242C11.5053 2.91246 11.9302 2.55919 12.4101 2.60336C12.8901 2.64754 13.2434 3.07243 13.1992 3.5524L12.925 6.532C12.8808 7.01196 12.4559 7.36524 11.9759 7.32106L8.99633 7.04682C8.51637 7.00264 8.16309 6.57775 8.20727 6.09778C8.25145 5.61782 8.67634 5.26454 9.15631 5.30872C9.15631 5.30872 9.30007 5.32195 9.47761 5.33829C9.65514 5.35463 9.72372 5.15636 9.59434 4.91333C9.00671 3.81081 7.89483 3.05542 6.62875 2.93889C4.57035 2.74944 2.74169 4.26985 2.55223 6.32826C2.3628 8.38641 3.88321 10.2151 5.94162 10.4045C6.49011 10.455 6.89389 10.9406 6.84341 11.4891C6.79292 12.0376 6.30729 12.4414 5.75879 12.3909C2.60511 12.1009 0.275574 9.29909 0.565811 6.14568C0.856072 2.99202 3.6579 0.662482 6.81156 0.952742C8.61448 1.11843 10.2139 2.12978 11.1532 3.62776Z" fill="#C4C4C4"/>
               </svg>flip</button>
-
-
-
 
             <p class="final-product__price-text">
               Total price <span class="final-product__price">0</span> €
@@ -437,36 +446,40 @@
           </div>
 
 
+        </div>
+
+
 
 <!--
-              <ul class="config__tab-list" role="tablist">
-                <li class="config__tab-item" role="presentation">
-                    <a class="config__tab-link" href="#section1" role="tab" id="tab1" aria-selected="true">Colour and stem
-                      <svg class="config__tab-icon" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.69788 8.19307L2.36168 14.2127C1.95862 14.5958 1.30513 14.5958 0.902269 14.2127C0.499374 13.8299 0.499374 13.2091 0.902269 12.8263L6.50882 7.4999L0.902432 2.17367C0.499537 1.79074 0.499537 1.16997 0.902432 0.787198C1.30533 0.404267 1.95879 0.404267 2.36184 0.787198L8.69804 6.80688C8.89949 6.99836 9.0001 7.24905 9.0001 7.49987C9.0001 7.75081 8.89929 8.00168 8.69788 8.19307Z" fill="#909DA8"/>
-                      </svg>
-                    </a>
-                </li>
-                <li class="config__tab-item" role="presentation">
-                    <a class="config__tab-link" href="#section2" role="tab" id="tab2" tabindex="-1">Accessories
-                      <svg class="config__tab-icon" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.69788 8.19307L2.36168 14.2127C1.95862 14.5958 1.30513 14.5958 0.902269 14.2127C0.499374 13.8299 0.499374 13.2091 0.902269 12.8263L6.50882 7.4999L0.902432 2.17367C0.499537 1.79074 0.499537 1.16997 0.902432 0.787198C1.30533 0.404267 1.95879 0.404267 2.36184 0.787198L8.69804 6.80688C8.89949 6.99836 9.0001 7.24905 9.0001 7.49987C9.0001 7.75081 8.89929 8.00168 8.69788 8.19307Z" fill="#909DA8"/>
-                      </svg>
-                    </a>
-                </li>
-                <li class="config__tab-item" role="presentation">
-                    <a class="config__tab-link" href="#section3" role="tab" id="tab3" tabindex="-1">Nomi Baby
-                      <svg class="config__tab-icon" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.69788 8.19307L2.36168 14.2127C1.95862 14.5958 1.30513 14.5958 0.902269 14.2127C0.499374 13.8299 0.499374 13.2091 0.902269 12.8263L6.50882 7.4999L0.902432 2.17367C0.499537 1.79074 0.499537 1.16997 0.902432 0.787198C1.30533 0.404267 1.95879 0.404267 2.36184 0.787198L8.69804 6.80688C8.89949 6.99836 9.0001 7.24905 9.0001 7.49987C9.0001 7.75081 8.89929 8.00168 8.69788 8.19307Z" fill="#909DA8"/>
-                      </svg>
-                    </a>
-                </li>
-              </ul>
+            <ul class="config__tab-list" role="tablist">
+              <li class="config__tab-item" role="presentation">
+                  <a class="config__tab-link" href="#section1" role="tab" id="tab1" aria-selected="true">Colour and stem
+                    <svg class="config__tab-icon" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.69788 8.19307L2.36168 14.2127C1.95862 14.5958 1.30513 14.5958 0.902269 14.2127C0.499374 13.8299 0.499374 13.2091 0.902269 12.8263L6.50882 7.4999L0.902432 2.17367C0.499537 1.79074 0.499537 1.16997 0.902432 0.787198C1.30533 0.404267 1.95879 0.404267 2.36184 0.787198L8.69804 6.80688C8.89949 6.99836 9.0001 7.24905 9.0001 7.49987C9.0001 7.75081 8.89929 8.00168 8.69788 8.19307Z" fill="#909DA8"/>
+                    </svg>
+                  </a>
+              </li>
+              <li class="config__tab-item" role="presentation">
+                  <a class="config__tab-link" href="#section2" role="tab" id="tab2" tabindex="-1">Accessories
+                    <svg class="config__tab-icon" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.69788 8.19307L2.36168 14.2127C1.95862 14.5958 1.30513 14.5958 0.902269 14.2127C0.499374 13.8299 0.499374 13.2091 0.902269 12.8263L6.50882 7.4999L0.902432 2.17367C0.499537 1.79074 0.499537 1.16997 0.902432 0.787198C1.30533 0.404267 1.95879 0.404267 2.36184 0.787198L8.69804 6.80688C8.89949 6.99836 9.0001 7.24905 9.0001 7.49987C9.0001 7.75081 8.89929 8.00168 8.69788 8.19307Z" fill="#909DA8"/>
+                    </svg>
+                  </a>
+              </li>
+              <li class="config__tab-item" role="presentation">
+                  <a class="config__tab-link" href="#section3" role="tab" id="tab3" tabindex="-1">Nomi Baby
+                    <svg class="config__tab-icon" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.69788 8.19307L2.36168 14.2127C1.95862 14.5958 1.30513 14.5958 0.902269 14.2127C0.499374 13.8299 0.499374 13.2091 0.902269 12.8263L6.50882 7.4999L0.902432 2.17367C0.499537 1.79074 0.499537 1.16997 0.902432 0.787198C1.30533 0.404267 1.95879 0.404267 2.36184 0.787198L8.69804 6.80688C8.89949 6.99836 9.0001 7.24905 9.0001 7.49987C9.0001 7.75081 8.89929 8.00168 8.69788 8.19307Z" fill="#909DA8"/>
+                    </svg>
+                  </a>
+              </li>
+            </ul>
 
 -->
 
 
-        </div>
+      </div>
+      <button class="config__result-btn"><span>View result</span></button>
     </section>
 
 

@@ -49,20 +49,19 @@ function generateURL(id) {
   return 'https://www.youtube.com/embed/' + id + query;
 }
 
-
 document.addEventListener('DOMContentLoaded', function() {
   findVideos();
   /* tabbed interface */
-  const tabs = document.querySelector('.config__tabs');
+  const tabs = Array.from(document.querySelectorAll('.config__tab-label'));
 
-  tabs.addEventListener('click', e => {
-    if (e.target.classList.contains('config__tab-label')) {
-      console.log(e.target);
-
-      setTimeout(() => {
-        e.target.scrollIntoView();
-      }, 0);
-    }
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      if (window.innerWidth < 768) {
+        setTimeout(() => {
+          tab.scrollIntoView();
+        }, 0);
+      }
+    });
   });
 
   /* swiper */
@@ -175,14 +174,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-});
+  /* final product modal */
+  const finalProductModalClose = document.querySelector('.final-product__close');
+  const finalProductModal = document.querySelector('.config__final-product-wrapper');
+  const viewResultBtn = document.querySelector('.config__result-btn');
 
+  viewResultBtn.addEventListener('click', e => {
+    e.preventDefault();
+    finalProductModal.classList.add('open');
+  });
+
+  finalProductModalClose.addEventListener('click', e => {
+    e.preventDefault();
+    finalProductModal.classList.remove('open');
+  })
+
+});
 
   /* nomi products */
 
   ///////// временный объект
   const nomiProducts = [{sku:"EM-250202",id:"20832",name:"Nomi Highchair cushion kussen - Premium Denim",price:59.95,color:"Donkerblauw",colorComb:"Lichtgrijs",},{sku:"EM-250201",id:"20831",name:"Nomi Highchair cushion kussen - Premium Chambray",price:59.95,color:"Blauw",colorComb:"Lichtgrijs",},{sku:"EM-255007",id:"20830",name:"Nomi Highchair cushion kussen - Pale Blue/Sand",price:49.95,color:"Lichtblauw",colorComb:"Beige",},{sku:"EM-255006",id:"20828",name:"Nomi Highchair cushion kussen - Pale Pink/Sand",price:49.95,color:"Roze",colorComb:"Beige",},{sku:"EM-255005",id:"20827",name:"Nomi Highchair cushion kussen - Dark grey/sand",price:49.95,color:"Donkergrijs",colorComb:"Beige",},{sku:"EM-550202",id:"20858",name:"Nomi baby mattress - Premium Denim",price:79.95,color:"Donkerblauw",colorComb:"Lichtgrijs",},{sku:"EM-550201",id:"20857",name:"Nomi baby mattress - Premium Chambray",price:79.95,color:"Blauw",colorComb:"Lichtgrijs",},{sku:"EM-555007",id:"20856",name:"Nomi baby mattress - Pale Blue/Sand",price:54.95,color:"Lichtblauw",colorComb:"Beige",},{sku:"EM-555006",id:"20855",name:"Nomi baby mattress - Pale Pink/Sand",price:54.95,color:"Roze",colorComb:"Beige",},{sku:"EM-555005",id:"20854",name:"Nomi baby mattress - Dark Grey/Sand",price:54.95,color:"Donkergrijs",colorComb:"Beige",},{sku:"EM-600000",id:"20860",name:"Nomi Play Speel boog - Grey",price:39.95,color:"Grijs",},{sku:"EM-300011",id:"20842",name:"Nomi Mini safety bar - Burnt Orange",price:39.95,color:"Oranje",},{sku:"EM-300010",id:"20841",name:"Nomi Mini safety bar - Anthracite",price:39.95,color:"Antraciet",},{sku:"EM-300009",id:"20840",name:"Nomi Mini safety bar - Navy",price:39.95,color:"Donkerblauw",},{sku:"EM-300008",id:"20839",name:"Nomi Mini safety bar - Grey",price:39.95,color:"Grijs",},{sku:"EM-300007",id:"20838",name:"Nomi Mini safety bar - Lime",price:39.95,color:"Lime",},{sku:"EM-300006",id:"20837",name:"Nomi Mini safety bar - Ocean",price:39.95,color:"Lichtblauw",},{sku:"EM-300005",id:"20836",name:"Nomi Mini safety bar - Pale Pink",price:39.95,color:"Roze",},{sku:"EM-300003",id:"20835",name:"Nomi Mini safety bar - Coffee",price:39.95,color:"Donkerbruin",},{sku:"EM-300002",id:"20834",name:"Nomi Mini safety bar - Black",price:39.95,color:"Zwart",},{sku:"EM-300001",id:"20833",name:"Nomi Mini safety bar - White",price:39.95,color:"Wit",},{sku:"EM-400011",id:"20849",name:"Nomi Tray - Burnt Orange",price:44.95,color:"Oranje",},{sku:"EM-400010",id:"20848",name:"Nomi Tray - Anthracite",price:44.95,color:"Antraciet",},{sku:"EM-400009",id:"20847",name:"Nomi Tray - Navy",price:44.95,color:"Donkerblauw",},{sku:"EM-400008",id:"20846",name:"Nomi Tray - Grey",price:44.95,color:"Grijs",},{sku:"EM-400003",id:"20845",name:"Nomi Tray - Coffee",price:44.95,color:"Donkerbruin",},{sku:"EM-400002",id:"20844",name:"Nomi Tray - Black",price:44.95,color:"Zwart",},{sku:"EM-400001",id:"20843",name:"Nomi Tray - White",price:44.95,color:"Wit",},{sku:"EM-200011-207-GR",id:"21015",name:"Nomi Highchair - Natur oiled walnut/Burnt Orange",price:269.9500,color:"Oranje",colorComb:"Bruin",assocProducts:[{sku:"EM-100207",name:"Nomi Base (middle bar) walnut + walnut - Natur oiled",price:130,color:"Donkerbruin"},{sku:"EM-200011",name:"Nomi Highchair - Burnt Orange",price:139.95,color:"Oranje"},],},{sku:"EM-200010-207-GR",id:"21014",name:"Nomi Highchair - Natur oiled walnut/Anthracite",price:269.9500,color:"Antraciet",colorComb:"Bruin",assocProducts:[{sku:"EM-100207",name:"Nomi Base (middle bar) walnut + walnut - Natur oiled",price:130,color:"Donkerbruin"},{sku:"EM-200010",name:"Nomi Highchair - Anthracite",price:139.95,color:"Antraciet"},],},{sku:"EM-200009-207-GR",id:"21013",name:"Nomi Highchair - Natur oiled walnut/Navy",price:269.9500,color:"Donkerblauw",colorComb:"Bruin",assocProducts:[{sku:"EM-100207",name:"Nomi Base (middle bar) walnut + walnut - Natur oiled",price:130,color:"Donkerbruin"},{sku:"EM-200009",name:"Nomi Highchair - Navy",price:139.95,color:"Donkerblauw"},],},{sku:"EM-200008-207-GR",id:"21012",name:"Nomi Highchair - Natur oiled walnut/Grey",price:269.9500,color:"Grijs",colorComb:"Bruin",assocProducts:[{sku:"EM-100207",name:"Nomi Base (middle bar) walnut + walnut - Natur oiled",price:130,color:"Donkerbruin"},{sku:"EM-200008",name:"Nomi Highchair - Grey",price:139.95,color:"Grijs"},],},{sku:"EM-200007-207-GR",id:"21011",name:"Nomi Highchair - Natur oiled walnut/Lime",price:269.9500,color:"Lime",colorComb:"Bruin",assocProducts:[{sku:"EM-100207",name:"Nomi Base (middle bar) walnut + walnut - Natur oiled",price:130,color:"Donkerbruin"},{sku:"EM-200007",name:"Nomi Highchair - Lime",price:139.95,color:"Lime"},],},{sku:"EM-200006-207-GR",id:"21010",name:"Nomi Highchair - Natur oiled walnut/Ocean",price:269.9500,color:"Lichtblauw",colorComb:"Bruin",assocProducts:[{sku:"EM-100207",name:"Nomi Base (middle bar) walnut + walnut - Natur oiled",price:130,color:"Donkerbruin"},{sku:"EM-200006",name:"Nomi Highchair - Ocean",price:139.95,color:"Lichtblauw"},],},{sku:"EM-200005-207-GR",id:"21009",name:"Nomi Highchair - Natur oiled walnut/Pale Pink",price:269.9500,color:"Roze",colorComb:"Bruin",assocProducts:[{sku:"EM-100207",name:"Nomi Base (middle bar) walnut + walnut - Natur oiled",price:130,color:"Donkerbruin"},{sku:"EM-200005",name:"Nomi Highchair - Pale Pink",price:139.95,color:"Roze"},],},{sku:"EM-200003-207-GR",id:"21008",name:"Nomi Highchair - Natur oiled walnut/Coffee",price:269.9500,color:"Donkerbruin",colorComb:"Bruin",assocProducts:[{sku:"EM-100207",name:"Nomi Base (middle bar) walnut + walnut - Natur oiled",price:130,color:"Donkerbruin"},{sku:"EM-200003",name:"Nomi Highchair - Coffee",price:139.95,color:"Bruin"},],},{sku:"EM-200002-207-GR",id:"21007",name:"Nomi Highchair - Natur oiled walnut/Black",price:269.9500,color:"Zwart",colorComb:"Bruin",assocProducts:[{sku:"EM-100207",name:"Nomi Base (middle bar) walnut + walnut - Natur oiled",price:130,color:"Donkerbruin"},{sku:"EM-200002",name:"Nomi Highchair - Black",price:139.95,color:"Zwart"},],},{sku:"EM-200001-207-GR",id:"21006",name:"Nomi Highchair - Natur oiled walnut/White",price:269.9500,color:"Wit",colorComb:"Bruin",assocProducts:[{sku:"EM-100207",name:"Nomi Base (middle bar) walnut + walnut - Natur oiled",price:130,color:"Donkerbruin"},{sku:"EM-200001",name:"Nomi Highchair - White",price:139.95,color:"Wit"},],},{sku:"EM-200011-206-GR",id:"21005",name:"Nomi Highchair - Natur oiled/Burnt Orange",price:269.9500,color:"Oranje",colorComb:"Beige",assocProducts:[{sku:"EM-100206",name:"Nomi Base (middle bar) oak + oak - Natur oiled",price:130,color:"Oker"},{sku:"EM-200011",name:"Nomi Highchair - Burnt Orange",price:139.95,color:"Oranje"},],},{sku:"EM-200010-206-GR",id:"21004",name:"Nomi Highchair - Natur oiled/Anthracite",price:269.9500,color:"Antraciet",colorComb:"Beige",assocProducts:[{sku:"EM-100206",name:"Nomi Base (middle bar) oak + oak - Natur oiled",price:130,color:"Oker"},{sku:"EM-200009",name:"Nomi Highchair - Navy",price:139.95,color:"Donkerblauw"},],},{sku:"EM-200009-206-GR",id:"21003",name:"Nomi Highchair - Natur oiled/Navy",price:269.9500,color:"Donkerblauw",colorComb:"Beige",assocProducts:[{sku:"EM-100206",name:"Nomi Base (middle bar) oak + oak - Natur oiled",price:130,color:"Oker"},{sku:"EM-200009",name:"Nomi Highchair - Navy",price:139.95,color:"Donkerblauw"},],},{sku:"EM-200008-206-GR",id:"21002",name:"Nomi Highchair - Natur oiled/Grey",price:269.9500,color:"Grijs",colorComb:"Beige",assocProducts:[{sku:"EM-100206",name:"Nomi Base (middle bar) oak + oak - Natur oiled",price:130,color:"Oker"},{sku:"EM-200008",name:"Nomi Highchair - Grey",price:139.95,color:"Grijs"},],},{sku:"EM-200007-206-GR",id:"21001",name:"Nomi Highchair - Natur oiled/Lime",price:269.9500,color:"Lime",colorComb:"Beige",assocProducts:[{sku:"EM-100206",name:"Nomi Base (middle bar) oak + oak - Natur oiled",price:130,color:"Oker"},{sku:"EM-200007",name:"Nomi Highchair - Lime",price:139.95,color:"Lime"},],},{sku:"EM-200006-206-GR",id:"21000",name:"Nomi Highchair - Natur oiled/Ocean",price:269.9500,color:"Lichtblauw",colorComb:"Beige",assocProducts:[{sku:"EM-100206",name:"Nomi Base (middle bar) oak + oak - Natur oiled",price:130,color:"Oker"},{sku:"EM-200006",name:"Nomi Highchair - Ocean",price:139.95,color:"Lichtblauw"},],},{sku:"EM-200005-206-GR",id:"20999",name:"Nomi Highchair - Natur oiled/Pale Pink",price:269.9500,color:"Roze",colorComb:"Beige",assocProducts:[{sku:"EM-100206",name:"Nomi Base (middle bar) oak + oak - Natur oiled",price:130,color:"Oker"},{sku:"EM-200005",name:"Nomi Highchair - Pale Pink",price:139.95,color:"Roze"},],},{sku:"EM-200003-206-GR",id:"20998",name:"Nomi Highchair - Natur oiled/Coffee",price:269.9500,color:"Bruin",colorComb:"Beige",assocProducts:[{sku:"EM-100206",name:"Nomi Base (middle bar) oak + oak - Natur oiled",price:130,color:"Oker"},{sku:"EM-200003",name:"Nomi Highchair - Coffee",price:139.95,color:"Bruin"},],},{sku:"EM-200002-206-GR",id:"20997",name:"Nomi Highchair - Natur oiled/Black",price:269.9500,color:"Zwart",colorComb:"Beige",assocProducts:[{sku:"EM-100206",name:"Nomi Base (middle bar) oak + oak - Natur oiled",price:130,color:"Oker"},{sku:"EM-200002",name:"Nomi Highchair - Black",price:139.95,color:"Zwart"},],},{sku:"EM-200001-206-GR",id:"20996",name:"Nomi Highchair - Natur oiled/White",price:269.9500,color:"Wit",colorComb:"Beige",assocProducts:[{sku:"EM-100206",name:"Nomi Base (middle bar) oak + oak - Natur oiled",price:130,color:"Oker"},{sku:"EM-200001",name:"Nomi Highchair - White",price:139.95,color:"Wit"},],},{sku:"EM-200011-102-GR",id:"20995",name:"Nomi Highchair - Blackstained/Burnt Orange",price:219.9500,color:"Oranje",colorComb:"Zwart",assocProducts:[{sku:"EM-100102",name:"Nomi Base (middle bar) oak + beech - Blackstained",price:80,color:"Zwart"},{sku:"EM-200011",name:"Nomi Highchair - Burnt Orange",price:139.95,color:"Oranje"},],},{sku:"EM-200010-102-GR",id:"20994",name:"Nomi Highchair - Blackstained/Anthracite",price:219.9500,color:"Antraciet",colorComb:"Zwart",assocProducts:[{sku:"EM-100102",name:"Nomi Base (middle bar) oak + beech - Blackstained",price:80,color:"Zwart"},{sku:"EM-200010",name:"Nomi Highchair - Anthracite",price:139.95,color:"Antraciet"},],},{sku:"EM-200009-102-GR",id:"20993",name:"Nomi Highchair - Blackstained/Navy",price:219.9500,color:"Donkerblauw",colorComb:"Zwart",assocProducts:[{sku:"EM-100102",name:"Nomi Base (middle bar) oak + beech - Blackstained",price:80,color:"Zwart"},{sku:"EM-200009",name:"Nomi Highchair - Navy",price:139.95,color:"Donkerblauw"},],},{sku:"EM-200008-102-GR",id:"20992",name:"Nomi Highchair - Blackstained/Grey",price:219.9500,color:"Grijs",colorComb:"Zwart",assocProducts:[{sku:"EM-100102",name:"Nomi Base (middle bar) oak + beech - Blackstained",price:80,color:"Zwart"},{sku:"EM-200008",name:"Nomi Highchair - Grey",price:139.95,color:"Grijs"},],},{sku:"EM-200007-102-GR",id:"20991",name:"Nomi Highchair - Blackstained/Lime",price:219.9500,color:"Lime",colorComb:"Zwart",assocProducts:[{sku:"EM-100102",name:"Nomi Base (middle bar) oak + beech - Blackstained",price:80,color:"Zwart"},{sku:"EM-200007",name:"Nomi Highchair - Lime",price:139.95,color:"Lime"},],},{sku:"EM-200006-102-GR",id:"20990",name:"Nomi Highchair - Blackstained/Ocean",price:219.9500,color:"Lichtblauw",colorComb:"Zwart",assocProducts:[{sku:"EM-100102",name:"Nomi Base (middle bar) oak + beech - Blackstained",price:80,color:"Zwart"},{sku:"EM-200006",name:"Nomi Highchair - Ocean",price:139.95,color:"Lichtblauw"},],},{sku:"EM-200005-102-GR",id:"20989",name:"Nomi Highchair - Blackstained/Pale Pink",price:219.9500,color:"Roze",colorComb:"Zwart",assocProducts:[{sku:"EM-100102",name:"Nomi Base (middle bar) oak + beech - Blackstained",price:80,color:"Zwart"},{sku:"EM-200005",name:"Nomi Highchair - Pale Pink",price:139.95,color:"Roze"},],},{sku:"EM-200003-102-GR",id:"20988",name:"Nomi Highchair - Blackstained/Coffee",price:219.9500,color:"Bruin",colorComb:"Zwart",assocProducts:[{sku:"EM-100102",name:"Nomi Base (middle bar) oak + beech - Blackstained",price:80,color:"Zwart"},{sku:"EM-200003",name:"Nomi Highchair - Coffee",price:139.95,color:"Bruin"},],},{sku:"EM-200002-102-GR",id:"20987",name:"Nomi Highchair - Blackstained/Black",price:219.9500,color:"Zwart",colorComb:"Zwart",assocProducts:[{sku:"EM-100102",name:"Nomi Base (middle bar) oak + beech - Blackstained",price:80,color:"Zwart"},{sku:"EM-200002",name:"Nomi Highchair - Black",price:139.95,color:"Zwart"},],},{sku:"EM-200001-102-GR",id:"20986",name:"Nomi Highchair - Blackstained/White",price:219.9500,color:"Wit",colorComb:"Zwart",assocProducts:[{sku:"EM-100102",name:"Nomi Base (middle bar) oak + beech - Blackstained",price:80,color:"Zwart"},{sku:"EM-200001",name:"Nomi Highchair - White",price:139.95,color:"Wit"},],},{sku:"EM-200011-101-GR",id:"20980",name:"Nomi Highchair - White oiled/Burnt Orange",price:219.9500,color:"Oranje",colorComb:"Wit",assocProducts:[{sku:"EM-100101",name:"Nomi Base (middle bar) oak + beech - White oiled",price:80,color:"Champagne"},{sku:"EM-200011",name:"Nomi Highchair - Burnt Orange",price:139.95,color:"Oranje"},],},{sku:"EM-200010-101-GR",id:"20979",name:"Nomi Highchair - White oiled/Anthracite",price:219.9500,color:"Antraciet",colorComb:"Wit",assocProducts:[{sku:"EM-100101",name:"Nomi Base (middle bar) oak + beech - White oiled",price:80,color:"Champagne"},{sku:"EM-200010",name:"Nomi Highchair - Anthracite",price:139.95,color:"Antraciet"},],},{sku:"EM-200009-101-GR",id:"20978",name:"Nomi Highchair - White oiled/Navy",price:219.9500,color:"Blauw",colorComb:"Wit",assocProducts:[{sku:"EM-100101",name:"Nomi Base (middle bar) oak + beech - White oiled",price:80,color:"Champagne"},{sku:"EM-200009",name:"Nomi Highchair - Navy",price:139.95,color:"Donkerblauw"},],},{sku:"EM-200008-101-GR",id:"20977",name:"Nomi Highchair - White oiled/Grey",price:219.9500,color:"Grijs",colorComb:"Wit",assocProducts:[{sku:"EM-100101",name:"Nomi Base (middle bar) oak + beech - White oiled",price:80,color:"Champagne"},{sku:"EM-200008",name:"Nomi Highchair - Grey",price:139.95,color:"Grijs"},],},{sku:"EM-200007-101-GR",id:"20976",name:"Nomi Highchair - White oiled/Lime",price:219.9500,color:"Lime",colorComb:"Wit",assocProducts:[{sku:"EM-100101",name:"Nomi Base (middle bar) oak + beech - White oiled",price:80,color:"Champagne"},{sku:"EM-200007",name:"Nomi Highchair - Lime",price:139.95,color:"Lime"},],},{sku:"EM-200006-101-GR",id:"20975",name:"Nomi Highchair - White oiled/Ocean",price:219.9500,color:"Groen",colorComb:"Wit",assocProducts:[{sku:"EM-100101",name:"Nomi Base (middle bar) oak + beech - White oiled",price:80,color:"Champagne"},{sku:"EM-200006",name:"Nomi Highchair - Ocean",price:139.95,color:"Lichtblauw"},],},{sku:"EM-200005-101-GR",id:"20973",name:"Nomi Highchair - White oiled/Pale Pink",price:219.9500,color:"Roze",colorComb:"Wit",assocProducts:[{sku:"EM-100101",name:"Nomi Base (middle bar) oak + beech - White oiled",price:80,color:"Champagne"},{sku:"EM-200005",name:"Nomi Highchair - Pale Pink",price:139.95,color:"Roze"},],},{sku:"EM-200003-101-GR",id:"20972",name:"Nomi Highchair - White oiled/Coffee",price:219.9500,color:"Bruin",colorComb:"Wit",assocProducts:[{sku:"EM-100101",name:"Nomi Base (middle bar) oak + beech - White oiled",price:80,color:"Champagne"},{sku:"EM-200003",name:"Nomi Highchair - Coffee",price:139.95,color:"Bruin"},],},{sku:"EM-200002-101-GR",id:"20971",name:"Nomi Highchair - White oiled/Black",price:219.9500,color:"Zwart",colorComb:"Wit",assocProducts:[{sku:"EM-100101",name:"Nomi Base (middle bar) oak + beech - White oiled",price:80,color:"Champagne"},{sku:"EM-200002",name:"Nomi Highchair - Black",price:139.95,color:"Zwart"},],},{sku:"EM-200001-101-GR",id:"20968",name:"Nomi Highchair - White oiled/White",price:219.9500,color:"Wit",colorComb:"Wit",assocProducts:[{sku:"EM-100101",name:"Nomi Base (middle bar) oak + beech - White oiled",price:80,color:"Champagne"},{sku:"EM-200001",name:"Nomi Highchair - White",price:139.95,color:"Wit"},],},{sku:"EM-500011",id:"20850",name:"Nomi Baby Base 2.0 - White",price:75,color:"Wit",},{sku:"EM-500012",id:"20851",name:"Nomi Baby Base 2.0 - Black",price:75,color:"Zwart",},{sku:"EM-500013",id:"20852",name:"Nomi Baby Base 2.0 - Coffee",price:75,color:"Donkerbruin",},{sku:"EM-500018",id:"20853",name:"Nomi Baby Base 2.0 - Grey",price:75,color:"Grijs",},{sku:"EM-900025",id:"20859",name:"Nomi Harness Tuigje Gordel - Sand",price:39.95,color:"Beige",},];
-
 
   document.addEventListener('DOMContentLoaded', function() {
 
@@ -214,11 +226,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-    if (categoryName) {
-      return categoryName;
-    } else {
-      console.error('category from name ' + itemName + ' not found');
-    }
+    return categoryName ? categoryName : false;
   }
 
   function getUniqueCategoryColors(products) {
@@ -228,8 +236,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     return colors.filter(onlyUnique);
   }
-
-  console.log('nomi products loaded', nomiProducts);
 
   const categories = [
     'chair',
@@ -351,57 +357,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Сконфигурированный товар
-  window.finalProduct = {
-    link: '',
-    totalPrice: 0,
-    items: {
-      mattress: {
-        price: 0,
-        id: '',
-        modifier: '',
-      },
-      babybase: {
-        price: 0,
-        id: '',
-        modifier: '',
-      },
-      chair: {
-        price: 0,
-        id: '',
-        modifier: '',
-      },
-      cushion: {
-        price: 0,
-        id: '',
-        modifier: '',
-      },
-      harness: {
-        price: 0,
-        id: '',
-        modifier: '',
-      },
-      mini: {
-        price: 0,
-        id: '',
-        modifier: '',
-      },
-      play: {
-        price: 0,
-        id: '',
-        modifier: '',
-      },
-      tray: {
-        price: 0,
-        id: '',
-        modifier: '',
-      }
-    }
-  }
-
-  // Кнопка flip
-  const flipCategories = {
-    cushion: false,
-    mattress: false,
+  const finalProduct = {
+    items: {},
   }
 
   // Товары по категориям
@@ -415,11 +372,8 @@ document.addEventListener('DOMContentLoaded', function() {
       price: 0,
       id: '',
       modifier: '',
-    }
+    };
   });
-  // chairParts.forEach(part => {
-  //   assocProductsSorted[part] = [];
-  // });
 
   // Разбиваем товары по категориям
   nomiProducts.forEach(item => {
@@ -460,8 +414,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-
-  console.log('productsSorted', productsSorted);
 
   // Добавляем все цвета в разметку
   Object.keys(productsSorted).forEach(key => {
@@ -510,7 +462,7 @@ document.addEventListener('DOMContentLoaded', function() {
       background = itemColor.includes('.jpg') ? `background-image: url(img/${category}/${itemColor})` : `background-color: ${itemColor}`;
     }
 
-    const colorItem = `<input class="config__radio" type="radio" name="${category}Color" value="${color}" aria-label="${color}" style="${background}" data-category="${category}">`;
+    const colorItem = `<div class="config__radio-wrapper"><input class="config__radio" type="radio" name="${category}Color" value="${color}" aria-label="${color}" style="${background}" data-category="${category}"></div>`;
     node.insertAdjacentHTML('beforeend', colorItem);
   }
 
@@ -518,6 +470,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function addColorItemByProduct (product, node) {
     let background = '';
     let inputClass = 'config__radio';
+    let colorCaption = '';
     const itemColor = colorCodes[product.cat][product.color];
     const itemColorComb = colorCodes[product.cat][product.colorComb];
 
@@ -528,29 +481,25 @@ document.addEventListener('DOMContentLoaded', function() {
       if (itemColorComb) {
         background += `, url(img/${product.cat}/${itemColorComb})`;
         inputClass += ' config__radio--double';
+        colorCaption = `<span class="config__color-name">${product.color} / ${product.colorComb}</span>`
       }
     }
-    const colorItem = `<input class="${inputClass}" type="radio" name="${product.cat}Color" value="${product.color}" aria-label="${product.color}" style="${background}" data-category="${product.cat}">`;
+    const colorItem = `<div class="config__radio-wrapper"><input class="${inputClass}" type="radio" name="${product.cat}Color" value="${product.color}" aria-label="${product.color}" style="${background}" data-category="${product.cat}">${colorCaption}</div>`;
     node.insertAdjacentHTML('beforeend', colorItem);
   }
 
   function selectChairItem(item) {
 
     const selectedProduct = getProdcutbyColor(item);
-    console.log('selected product', selectedProduct);
 
     // получаем возможные варианты групповых товаров
     const availableChairs = productsSorted.chair.filter(product => {
       return filterAssocChairs(product.assocProducts, selectedProduct);
     });
-    console.log('availableChairs', availableChairs);
 
     // выбираем второй симпл
     const secondItemCategory = selectedProduct.cat === chairParts[0] ? chairParts[1] : chairParts[0];
-    console.log('secondItemCategory', secondItemCategory);
-
     const secondColorItems = Array.from(elConfig.querySelectorAll('input[name="' + secondItemCategory + 'Color"]'));
-
     let secondSelectedProduct;
     for(let j = 0; j < secondColorItems.length; j++) {
       if (secondColorItems[j].checked) {
@@ -560,13 +509,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (secondSelectedProduct) {
-      console.log('selected second product', secondSelectedProduct);
+      // если выбран цвет второго симпла
       const selectedChair = availableChairs.find(product => {
         return filterAssocChairs(product.assocProducts, secondSelectedProduct);
       });
-      console.log('selectedChair', selectedChair);
 
       if (selectedChair) {
+        // если есть подходящий групповой товар, выбираем его
         setFinalData(selectedChair);
         elFinalPrice.textContent = getTotalPrice();
         updateAddToCartLink();
@@ -582,16 +531,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           }
         });
-
-        previousChairPart = item;
+        previousChairPartSelected[selectedProduct.cat] = item;
       } else {
-        console.log ('no group product found')
-        previousChairPart.click();
+        // если нет доступного товара, выбираем предыдующий доступный
+        previousChairPartSelected[selectedProduct.cat].click();
       }
-
-
     } else {
-      selectFisrtCategoryItem(secondItemCategory);
+      // selectFisrtCategoryItem(secondItemCategory);
+      previousChairPartSelected[selectedProduct.cat] = item;
     }
   }
 
@@ -766,16 +713,21 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function updateFlipButton() {
-    const activeMulticolor = elConfig.querySelector('.config__tab.active .config__radio--double:checked');
-    if (activeMulticolor) {
-      const currentItemCat = activeMulticolor.dataset.category;
-      elFlipButton.dataset.category = currentItemCat;
+    if (elSectionBaby.classList.contains('active') && finalProduct.items.mattress.id) {
+      // если таб nomi и выбран матрас
+      elFlipButton.dataset.category = 'mattress';
+      elFlipButton.classList.add('active');
+    } else if (finalProduct.items.cushion.id) {
+      // если выбрано сиденье
+      elFlipButton.dataset.category = 'cushion';
+      elFlipButton.classList.add('active');
     } else {
+      // если нечего не выбрано, скрываем кнопку
       elFlipButton.classList.remove('active');
     }
   }
 
-  let previousChairPart
+  const previousChairPartSelected = {};
 
   // Обработчик всех изменений конфигуратора
   document.addEventListener('change', e => {
@@ -785,13 +737,13 @@ document.addEventListener('DOMContentLoaded', function() {
       const selectedItem = e.target;
       toggleCheckbox(selectedItem);
       elFinalPrice.textContent = getTotalPrice();
-      console.log(getTotalPrice())
+      updateFlipButton();
     }
 
     // Если радиобатн
     if (e.target.classList.contains('config__radio')) {
-      console.log('config__radio');
       const product = getProdcutbyColor(e.target);
+      e.preventDefault()
 
       if (chairParts.includes(e.target.dataset.category)) {
         // если выбран стульчик
@@ -810,89 +762,58 @@ document.addEventListener('DOMContentLoaded', function() {
         babyPrice = finalProduct.items[babyParts[0]].price + finalProduct.items[babyParts[1]].price;
         elItemPrice.textContent = `Price ${babyPrice} €`;
         elFinalPrice.textContent = getTotalPrice();
+        updateFlipButton();
       } else {
         // если выбран аксессуар
         const itemPrice = product.price;
         const elItemPrice = e.target.closest('.config__item').querySelector('.config__item-price');
         elItemPrice.textContent = `Price ${itemPrice} €`;
         selectAccessoriesItem(e.target);
-        console.log('product', product);
         elFinalPrice.textContent = getTotalPrice();
-        console.log('total price', getTotalPrice());
+        updateFlipButton();
       }
     }
 
   });
 
-  elFlipButton.addEventListener('click', e => {
-
-  })
-
   document.addEventListener('click', e => {
     // Если таб
     if (e.target.classList.contains('config__tab-radio')) {
       const currentTabId = e.target.id;
-      console.log(currentTabId);
 
       // добавляем класс активной секции
       elConfigTabs.forEach(tab => tab.classList.remove('active'));
       const currentSectionId = '#' + e.target.dataset.section;
       elConfig.querySelector(currentSectionId).classList.add('active');
 
-
-      // Обновляем кнопку flip
-      updateFlipButton();
-
       elFinalProductImage.dataset.current = currentTabId;
       if (currentTabId === 'tab3') {
-
         elFinalProductImage.classList.remove('baby-hidden');
-        // скрываем все детали стульчика
-
       } else {
         // скрываем baby если выбрана
         elFinalProductImage.classList.add('baby-hidden');
       }
-    }
-
-    // обработчик для показа кнопки flip
-    if (e.target.classList.contains('config__radio--double')) {
-      console.log('flip button toggle');
-
-      let currentItemCat = e.target.dataset.category;
-
-      if (elSectionBaby.classList.contains('active') && elInputBaby.checked) {
-        console.log('baby button');
-        elFlipButton.classList.add('active');
-      } else if (elInputCushion.checked) {
-        console.log('cushion button');
-        elFlipButton.classList.add('active');
-      } else {
-        elFlipButton.classList.remove('active');
-      }
-      // присваиваем категорию кнопке flip
-      elFlipButton.dataset.category = currentItemCat;
+      updateFlipButton();
     }
 
     if (e.target.classList.contains('config__flip')) {
       // Обработчик смены двойных цветов
       const itemCategory = e.target.dataset.category;
 
-      console.log('itemCategory', itemCategory);
-
+      // Чередуем цвета таовара
       const itemColors = [finalProduct.items[itemCategory].color, finalProduct.items[itemCategory].colorComb];
-
       finalProduct.items[itemCategory].colorSelected = 1 - finalProduct.items[itemCategory].colorSelected;
-
       setProductImage(itemCategory, itemColors[finalProduct.items[itemCategory].colorSelected]);
-
-      console.log('itemColors', itemColors);
     }
   });
 
-
-
   // Выбираем первый стульчик при загрузке страницы
-  const elFirstHighchairColor = document.querySelector('.highchair-color .config__radio');
-  elFirstHighchairColor && elFirstHighchairColor.click();
+  const firstAvaliableChairProducts = productsSorted.chair[0].assocProducts;
+
+  firstAvaliableChairProducts.forEach(item => {
+    elConfig.querySelector('.config__radio[data-category="' + item.cat + '"][value="' + item.color + '"]').click();
+  });
+
+  // const elFirstHighchairColor = document.querySelector('.highchair-color .config__radio');
+  // elFirstHighchairColor && elFirstHighchairColor.click();
 });
