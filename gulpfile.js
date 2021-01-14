@@ -34,7 +34,7 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-var ftpPath = '/media/up/ikwordmama/promo/lassig2020/';
+var ftpPath = '/media/up/ikwordmama/promo/nomi/';
 
 gulp.task("css-upload", function () {
   return gulp.src("source/sass/style.scss")
@@ -55,6 +55,13 @@ gulp.task("html-upload", function () {
     .pipe(htmlmin({ collapseWhitespace: false }))
     .pipe(rename("index.upload.html"))
     .pipe(gulp.dest("build/upload"));
+});
+
+gulp.task("js-upload", function () {
+  return gulp.src("source/js/script.js")
+    .pipe(replace('img/', ftpPath))
+    .pipe(rename("script.upload.js"))
+    .pipe(gulp.dest("build/upload"))
 });
 
 gulp.task("html", function () {
@@ -142,7 +149,7 @@ gulp.task("server", function () {
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css", "css-upload", "refresh"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "html-upload", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "html-upload", "refresh"));
-  gulp.watch("source/js/**/*.js", gulp.series("copy", "refresh"));
+  gulp.watch("source/js/**/*.js", gulp.series("copy", "js-upload", "refresh"));
 });
 
 gulp.task("build", gulp.series(
@@ -153,7 +160,8 @@ gulp.task("build", gulp.series(
   "webp",
   "sprite",
   "html",
-  "html-upload"
+  "html-upload",
+  "js-upload"
 ));
 
 gulp.task("start", gulp.series("build", "server"));

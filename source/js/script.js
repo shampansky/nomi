@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     tab.addEventListener('click', () => {
       if (window.innerWidth < 768) {
         setTimeout(() => {
-          tab.scrollIntoView();
+          tab.scrollIntoView({block: "center", behavior: "auto"});
         }, 0);
       }
     });
@@ -184,10 +184,34 @@ document.addEventListener('DOMContentLoaded', function() {
     finalProductModal.classList.add('open');
   });
 
-  finalProductModalClose.addEventListener('click', e => {
-    e.preventDefault();
+  finalProductModal.addEventListener('click', e => {
+    console.log(e);
+    if(e.target.classList.contains('config__final-product-wrapper') || e.target.classList.contains('final-product__close')) {
+      e.preventDefault();
     finalProductModal.classList.remove('open');
+    }
   })
+
+  document.addEventListener('keydown', function (e) {
+    if(e.code === 'Escape') {
+      finalProductModal.classList.remove('open');
+    }
+  });
+
+  /* view result button scroll */
+
+  function trackScroll() {
+    if (resultButton.classList.contains('fixed') && window.pageYOffset < resultButtonCoords) {
+      resultButton.classList.remove('fixed');
+    } else if (window.pageYOffset > resultButtonCoords) {
+      resultButton.classList.add('fixed');
+    }
+  }
+
+  const resultButton = document.querySelector('.config__result-btn');
+  const resultButtonCoords = resultButton.getBoundingClientRect().bottom + window.pageYOffset;
+
+  window.addEventListener('scroll', trackScroll);
 
 });
 
@@ -699,7 +723,7 @@ document.addEventListener('DOMContentLoaded', function() {
     Object.keys(finalProduct.items).forEach(item => {
       totalPrice += finalProduct.items[item].price;
     });
-    return Math.round(totalPrice * 100) / 100;
+    return (Math.round(totalPrice * 100) / 100).toFixed(2);
   }
 
   function updateAddToCartLink() {
@@ -760,14 +784,14 @@ document.addEventListener('DOMContentLoaded', function() {
           selectFisrtCategoryItem(secondProductCat);
         }
         babyPrice = finalProduct.items[babyParts[0]].price + finalProduct.items[babyParts[1]].price;
-        elItemPrice.textContent = `Price ${babyPrice} €`;
+        elItemPrice.textContent = `Prijs ${babyPrice} €`;
         elFinalPrice.textContent = getTotalPrice();
         updateFlipButton();
       } else {
         // если выбран аксессуар
         const itemPrice = product.price;
         const elItemPrice = e.target.closest('.config__item').querySelector('.config__item-price');
-        elItemPrice.textContent = `Price ${itemPrice} €`;
+        elItemPrice.textContent = `Prijs ${itemPrice} €`;
         selectAccessoriesItem(e.target);
         elFinalPrice.textContent = getTotalPrice();
         updateFlipButton();
