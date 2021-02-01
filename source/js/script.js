@@ -53,12 +53,16 @@ document.addEventListener('DOMContentLoaded', function() {
   findVideos();
   /* tabbed interface */
   const tabs = Array.from(document.querySelectorAll('.config__tab-label'));
+  const sections = Array.from(document.querySelectorAll('.config__tab'));
 
   tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
+    tab.addEventListener('click', (e) => {
       if (window.innerWidth < 768) {
         setTimeout(() => {
-          tab.scrollIntoView({block: "center", behavior: "auto"});
+          const yOffset = -140;
+          const element = tab;
+          const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({top: y, behavior: 'smooth'});
         }, 0);
       }
     });
@@ -230,6 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const elFlipButton = elConfig.querySelector('.config__flip');
     const elInputCushion = elConfig.querySelector('#cushion');
     const elInputBaby = elConfig.querySelector('#baby');
+    const elConfigLabels = Array.from(elConfig.querySelectorAll('.config__tab-label'));
     const elConfigTabs = Array.from(elConfig.querySelectorAll('.config__tab'));
     const elSectionBaby = elConfig.querySelector('#section3');
 
@@ -806,9 +811,36 @@ document.addEventListener('DOMContentLoaded', function() {
       const currentTabId = e.target.id;
 
       // добавляем класс активной секции
-      elConfigTabs.forEach(tab => tab.classList.remove('active'));
       const currentSectionId = '#' + e.target.dataset.section;
-      elConfig.querySelector(currentSectionId).classList.add('active');
+      const currentSection = elConfig.querySelector(currentSectionId);
+
+      if (currentSection.classList.contains('active')) {
+        height = currentSection.clientHeight + 'px';
+        currentSection.style.height = height;
+        setTimeout(function () {
+          currentSection.style.height = '0px';
+        }, 0);
+
+        currentSection.addEventListener('transitionend',
+          function () {
+            currentSection.classList.remove('active');
+            currentSection.previousElementSibling.classList.remove('active');
+          }, {
+            once: true
+        });
+
+      } else {
+        elConfigTabs.forEach(tab => tab.classList.remove('active'));
+        elConfigLabels.forEach(label => label.classList.remove('active'));
+        currentSection.classList.add('active');
+        currentSection.previousElementSibling.classList.add('active');
+        currentSection.style.height = 'auto';
+        height = currentSection.clientHeight + 'px';
+        currentSection.style.height = '0px';
+        setTimeout(function () {
+          currentSection.style.height = height;
+        }, 0);
+      }
 
       elFinalProductImage.dataset.current = currentTabId;
       if (currentTabId === 'tab3') {

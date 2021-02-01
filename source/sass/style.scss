@@ -1003,24 +1003,17 @@
         display: none;
       }
       .config__tab-radio:checked + label {
-        color: #fff;
-        background-color: #00B900;
-        border-color: #00B900;
-
-        @media(max-width: 767px) {
-          margin-bottom: 0;
-
-          border-bottom-left-radius: 0;
-          border-bottom-right-radius: 0;
+        @media (min-width: 768px) {
+          color: #fff;
+          background-color: #00B900;
+          border-color: #00B900;
         }
 
         .config__tab-arrow {
-          @media(max-width: 767px) {
-            transform:  translateY(-50%) rotate(-90deg);
-          }
-
           path {
-            fill: #fff;
+            @media(min-width: 768px) {
+              fill: #fff;
+            }
           }
         }
       }
@@ -1062,6 +1055,29 @@
 
       &:last-of-type {
         margin-right: 0;
+      }
+
+      &.active {
+        @media(max-width: 767px) {
+          color: #fff;
+          background-color: #00B900;
+          border-color: #00B900;
+
+          margin-bottom: 0;
+
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+
+        .config__tab-arrow {
+          @media(max-width: 767px) {
+            transform:  translateY(-50%) rotate(-90deg);
+          }
+
+          path {
+            fill: #fff;
+          }
+        }
       }
     }
 
@@ -1131,6 +1147,8 @@
       @media(max-width: 767px) {
         order: initial;
         width: 100%;
+        transition: height .25s ease;
+        overflow: hidden;
       }
     }
 
@@ -1260,11 +1278,10 @@
           content: "";
 
           position: absolute;
-
-          left: -2px;
-          right: -2px;
-          top: -2px;
-          bottom: -2px;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
 
           border: 2px solid #00b900;
         }
